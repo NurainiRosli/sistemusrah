@@ -9,10 +9,6 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
 
 session_start();
 
-// cek apakah yang mengakses halaman ini sudah login
- //if($_SESSION['level']=="admin"){
-  //header("location:login.php?pesan=gagal");
- //}
 
 ?>
 
@@ -259,7 +255,6 @@ font-weight: bold;
     ?>  
      
         <table class="details">                          
-          <head>   
             <tr>   
               <th>Bil</th>    
               <th width="20%">Jabatan</th>   
@@ -267,8 +262,7 @@ font-weight: bold;
               <th colspan="2">Actions</th>
 
             </tr>   
-          </head>   
-          <body>   
+   
     <?php    
     $bil = 1; 
             while ($row = mysqli_fetch_array($rs_result)) {    
