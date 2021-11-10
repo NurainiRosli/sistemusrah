@@ -237,8 +237,7 @@ font-weight: bold;
         $rs_result = mysqli_query ($conn, $query); 
 
     ?>    
-        <table class="details">                          
-          <head>   
+        <table class="details">                            
             <tr>   
               <th>Bil</th>    
               <th width="20%">Nama</th>  
@@ -250,9 +249,7 @@ font-weight: bold;
 			  <th>Kelas Yang Dipegang</th>   
               <th colspan="2">Actions</th>
 
-            </tr>   
-          </head>   
-          <body>   
+            </tr>     
     <?php    
     $bil = 1; 
             while ($row = mysqli_fetch_array($rs_result)) {    
