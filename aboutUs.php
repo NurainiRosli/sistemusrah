@@ -184,9 +184,9 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
     </div>
     
     <div class="navbar">
-      <a href="#" >Laman Utama</a>
-      <a href="#">Aktiviti</a>
-      <a href="#">Pendaftaran Pelajar</a>
+      <a href="index.php" >Laman Utama</a>
+      <a href="aktiviti.php">Aktiviti</a>
+      <a href="#"></a>
       <a href="#">Tentang Kami</a>
       <a href="login.php" class="right">Log Masuk</a>
     </div>
