@@ -229,9 +229,6 @@ font-weight: bold;
   <div class="main">
 	
  <h1>Senarai Pelajar</h1>
-
- <!-- <p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
-   </div> -->
    
     <center> 
     <?php  
@@ -250,13 +247,12 @@ font-weight: bold;
     
         $start_from = ($page-1) * $per_page_record;     
     
-        $query = "SELECT * FROM students LIMIT $start_from, $per_page_record";    
+        $query = "SELECT * FROM student LIMIT $start_from, $per_page_record";    
         $rs_result = mysqli_query ($conn, $query); 
 		
     ?>  
      
-        <table class="details">                          
-          <head>   
+        <table class="details">                           
             <tr>   
               <th>Bil</th>    
               <th width="20%">Nama</th>   
@@ -266,9 +262,7 @@ font-weight: bold;
               <th>No Telefon</th>
               <th colspan="2">Actions</th>
 
-            </tr>   
-          </head>   
-          <body>   
+            </tr>    
     <?php    
     $bil = 1; 
             while ($row = mysqli_fetch_array($rs_result)) {    
@@ -280,7 +274,7 @@ font-weight: bold;
         $nomatrik = $row['noMatrik'];
         $jabatan = $row['jabatan'];
         $kelas = $row['kelas'];
-        $notel = $row['noTel'];
+
 
         echo "<tr>";
         echo "<td>$bil. </td>";
@@ -288,7 +282,6 @@ font-weight: bold;
         echo "<td>$nomatrik</td>";
         echo "<td>$jabatan</td>";
         echo "<td>$kelas</td>";
-        echo "<td>$notel</td>";
         echo "<td class='edit'> <a href='studentedit.php? siapa=$id'> Kemaskini</a></td>";
         echo "<td class='delete'> <a href='studentdelete.php? siapa=$id'> Padam </a></td>";
         echo "</tr>";
