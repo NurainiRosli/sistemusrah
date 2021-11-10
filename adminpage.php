@@ -178,7 +178,8 @@ h2{
   <a href=".php" >Laman Utama</a>
   <a href="studentrecord.php">Pelajar</a>
   <a href="fasirecord.php">Fasilitator</a>
-  <a href=".php"></a>
+  <a href="program.php">Program</a>
+  <a href="kelas.php">Senarai Kelas</a>
   <a href="indextest.php" class="right">Log Keluar</a>
 </div>
 
@@ -192,13 +193,11 @@ h2{
 	
  <h1>Ini Halaman Admin</h1>
 
-<?php 
 
-
-</div>
     
     
 <div class="footer">
+
 <?php
 
 echo "<p> Copyright &copy; " . date("Y") . " PTSS Program Usrah</p>";
